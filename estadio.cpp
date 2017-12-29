@@ -7,11 +7,14 @@
 #define FON 4
 
 
+#define TAR 1
+#define MET 2
+
 int main(){
 
 	unsigned opcion;
-
-	int efectivo;     
+	unsigned pago;
+	int modopago;     
 
 	printf(
 			"Elige la zona:\n"
@@ -46,19 +49,31 @@ int main(){
 	printf("\n");
 
 
-	printf("Metodo de pago: \n");
-	scanf(" %i", &efectivo);
+	printf(
+			"¿como quiere pagar? \n"
+			"\t1. TARJETA \n"
+			"\t2. METALICO \n"
+			"\tPago: \n"
+			"\n"
+		  );
 
+	scanf(" %u", &pago);
 
-
-	if (efectivo == 5){
-		printf("Deme el dinero \n");
+	switch(pago){
+		case TAR:
+			printf("meta el pin: ");
+			scanf(" %i", &pago);
+			break;
+		case MET:
+			printf("deme el dinero");
+			break;
+		default:
+			printf("1 o 2\n");
+			break;
 	}
-	else {
-		printf(" Ingrese el pin: ");
-		scanf(" %i", &efectivo);
-	}
+	printf("\n");
 
-	printf("pago con exito¡¡, Disfrute del partido \n");
+	printf("pago con exito¡¡ ,Disfrute del partido, Buenos Dias \n"); 
 	return EXIT_SUCCESS;
+
 }
