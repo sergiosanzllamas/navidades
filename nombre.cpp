@@ -4,11 +4,14 @@
 
 #define N 0XFF
 
+#define MAS 1
+#define BAN 2
+#define SPA 3
 int main(){
 
 	char nombre[N];
 	int edad;
-
+    unsigned tratamiento;
 
 	printf(" Dime tu nombre: ");
 	scanf(" %[^\n]", nombre);
@@ -22,6 +25,43 @@ int main(){
 
 
 		printf(" Hola, Buenos dias %s\n ¿que necesita?\n", nombre);
+
+
+       printf(
+               "elige tratamiento: \n"
+               "\n"
+               "\t1. MASAJE \n"
+               "\t2. BANO \n"
+               "\t3. SPA \n"
+               "\tTratamiento: \n"
+               "\n"
+                 );
+
+scanf(" %u", &tratamiento);
+
+
+
+
+switch(tratamiento){
+      case MAS:
+         printf(" MASAJE\n");
+          break;
+     case BAN:
+         printf(" BANO\n");
+          break;
+    case SPA:
+        printf(" SPA\n");
+       break;
+      default:
+  printf(" 1 al 3 \n");
+   
+
+
+
+
+
+
+}
 
 	}
 
