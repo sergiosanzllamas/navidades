@@ -1,16 +1,29 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+#define SUM 0
+#define RES 1
+#define MUL 2
+#define DIV 3
 
 
 int main(){
-
+    unsigned operacion;
 	int op1;
 	int op2;
 	int suma;
 
 
-	printf("sumar, restar , multiplicar o dividir:");
+	printf(
+            "Elige operacion. \n"
+            "\n"
+            "\t0. SUMA \n"
+            "\t1. RESTA \n"
+            "\t2. MULTIPLICACION \n"
+            "\t3. DIVISION. \n"
+            "\tOperacion :"
+            "\n"
+              );
 	scanf(" %i", &suma);
 
 	if (suma == 0) 
