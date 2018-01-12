@@ -9,9 +9,9 @@
 
 int main(){
     unsigned operacion;
-	int op1;
-	int op2;
-	int suma;
+	double op1;
+	double op2;
+        double suma;
 
 
 	printf(
@@ -24,52 +24,52 @@ int main(){
             "\tOperacion :"
             "\n"
               );
-	scanf(" %i", &suma);
+	scanf(" %lf", &suma);
 
 	if (suma == 0) 
 	{
 		printf("operando1:");
-		scanf(" %i", &op1);
+		scanf(" %lf", &op1);
 		printf("operando2:");
-		scanf(" %i", &op2);
+		scanf(" %lf", &op2);
 
-		printf(" %i + %i =%i\n", op1, op2, op1 + op2);
+		printf(" %.2lf + %.2lf =%.2lf\n", op1, op2, op1 + op2);
 
 	}
 
 	else if (suma == 1)
 	{
 		printf("operando1:");
-		scanf(" %i", &op1);
+		scanf(" %lf", &op1);
 		printf("operando2:");
-		scanf(" %i", &op2);
+		scanf(" %lf", &op2);
 
 
-		printf(" %i - %i =%i\n", op1, op2, op1 - op2);
+		printf(" %.2lf - %.2lf =%.2lf\n", op1, op2, op1 - op2);
 	}
 
 	else if(suma == 2)
 {
 	printf("entonces multiplicar \n");
 	printf("operando1:");
-	scanf(" %i", &op1);
+	scanf(" %lf", &op1);
 	printf("operando2:");
-	scanf(" %i", &op2);
+	scanf(" %lf", &op2);
 
 
-	printf(" %i * %i =%i\n", op1, op2, op1 * op2);
+	printf(" %.2lf * %.2lf =%.2lf\n", op1, op2, op1 * op2);
 
 }
 	else
 	{
 		printf("entonces dividr \n");
 		printf("operando1:");
-		scanf(" %i", &op1);
+		scanf(" %lf", &op1);
 		printf("operando2:");
-		scanf(" %i", &op2);
+		scanf(" %lf", &op2);
 
 
-		printf(" %i / %i =%i\n", op1, op2, op1 / op2);
+		printf(" %.2lf / %.2lf =%.2lf\n", op1, op2, op1 / op2);
 
 
 	}
