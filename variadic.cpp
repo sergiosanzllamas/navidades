@@ -17,7 +17,7 @@ int main(){
     int a[N][N];
     double s;
     double resultado;  
-  
+    int x, y; 
 
 
 
@@ -88,14 +88,20 @@ int main(){
         case POT:
             printf("Potencia\n");
             printf("Hace,os la potencia\n");
-          
+            printf("primer numero:\n");
+            scanf("%i", &x);
+            printf("segundo nuemro:\n");
+            scanf("%i", &y);
             
-      
-    default:
-    printf("del 1 al 6 huevon \n");
-    break;
-}
+            x^y=exp(y*log(x));
+            printf("el resultado de la potencia es %i", &x, &y); 
 
-return EXIT_SUCCESS;
+
+        default:
+            printf("del 1 al 6 huevon \n");
+            break;
+    }
+
+    return EXIT_SUCCESS;
 }
 
