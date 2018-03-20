@@ -7,7 +7,7 @@
 #define DIV 4
 #define MAT 5
 #define RAI 6
-#define POT 7
+#define LOG 7
 
 #define N   3
 int main(){
@@ -85,17 +85,14 @@ int main(){
             s=sqrt(s);
             printf("El Resultado de la Raiz es: %lf\n", s);
             system("PAUSE");
-        case POT:
-            printf("Potencia\n");
-            printf("Hace,os la potencia\n");
-            printf("primer numero:\n");
-            scanf("%i", &x);
-            printf("segundo nuemro:\n");
-            scanf("%i", &y);
-            
-            x^y=exp(y*log(x));
-            printf("el resultado de la potencia es %i", &x, &y); 
-
+        case LOG:
+            printf("Logaritmo\n");
+            printf("Hacemos el logaritmo\n");
+            printf("mete el  numero:\n");
+            scanf("%lf", &s);
+            s = log10(s);
+            printf("El logaritmo de %lf\n", s);
+            system("pause");
 
         default:
             printf("del 1 al 6 huevon \n");
