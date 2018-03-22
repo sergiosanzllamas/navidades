@@ -24,10 +24,10 @@
 #define DEC  3
 #define DES  4
 #define HEC  5
-#define KIM 6
+#define KIM  6
 
 
-
+#define M 20
 #define N   3
 const char *elegir0[] = {
     "SIMPLES",
@@ -51,6 +51,7 @@ const char *elegir2[]={
     "Decimetros",
     "DECAMETROS",
     "HECTOMETROS",
+    "KILOMETROS",
     NULL   
 };
 
@@ -65,14 +66,17 @@ int main(){
     double resultado;  
     int x, y;
     char r; 
+    int contra;
     printf("dame tu Nombre:");
     scanf("%s", &r);
     printf("dime tu edad:");
     scanf("%lf", &s);
+    printf("introduce la contraseña:");
+    scanf(" %i", &contra);
 
 
 
-    if(s >=17){
+    if(s >=17 && contra == 1234){
         printf(" puedes entrar en la calculadora\n");
 
         system("toilet -fpagga  Calculator");
@@ -124,17 +128,20 @@ int main(){
                         scanf(" %lf", &op2);
                         printf(" %.2lf / %.2lf =%.2lf\n", op1, op2, op1 / op2);
                         break;
-                        /* case MAT:
-                           printf("Matriz:\n");
+                        case MAT:
+                           printf("Matriz\n");
                            for(int f=0; f<N; f++)
                            for(int c=0; c<N; c++){
                            printf("mete numeros:");
                            scanf(" %i", &a[N][N]);
 
+                           resultado = a[0][1] * a[1][1] *a[2][2];
+
 
                            }
                            printf(" el resultdo es %.6lf \n", resultado);
-                           */
+                           break;
+                           
                     case RAI:
                         printf("Raiz Cuadrada:\n");
                         printf("Entonces hacemos la raiz\n");
@@ -170,7 +177,7 @@ int main(){
                 break;
             case CON:
                 printf("CONVERSIONES A METROS:\n");
-                for(int s=0; s<5; s++)
+                for(int s=0; s<6; s++)
                     printf("%i. %s.\n", s+1, elegir2[s]);
                 printf("que conversion a metros quieres:");
                 scanf("%i", &conversion);
@@ -202,14 +209,30 @@ int main(){
                         break;
                     case DES:
                         printf("Decametros:\n");
-                        printf("Pasamos de decametros a metros:\n");
+                        printf("Pasamos de decametros a metros\n");
                         printf("dame la cantidad de decametros:");
                         scanf("%lf", &s);
                         s = s*10;
                         printf("El paso de decametros a metros es %.2lf m \n", s);
                         break;
+                    case HEC:
+                        printf("Hectometros\n");
+                        printf("Pasamaos de hectometros a metros\n");
+                        printf("Dame la cantidad de hectometros:");
+                        scanf("%lf", &s);
+                        s = s*100;
+                        printf(" el paso de de hectometros a metros es %.2lf m \n", s);
+                        break;
+                    case KIM:
+                        printf("kilometros\n");
+                        printf("pasamos de kilometros a metros \n");
+                        printf("Dame la cantidad de Kilometros:");
+                        scanf("%lf", &s);
+                        s = s*1000;
+                        printf("El paso de kilometros a metros es %.2lf m \n", s);
+                        break;
                     default:
-                        printf("1 al 5\n");
+                        printf("1 al 6\n");
                         break;    
 
 
@@ -223,6 +246,7 @@ int main(){
 
     }else
         printf(" acceso denegado\n");
+  
 
     return EXIT_SUCCESS;
 }
