@@ -193,11 +193,11 @@ int main(){
 					case POT:
 						printf("POTENCIA\n");
 						printf("hacemos la potencia\n");
-						printf("dame el numero");
+						printf("dame el numero:");
 						scanf("%i", &x);
-						printf("dame el otro numero");
+						printf("dame el otro numero:");
 						scanf("%i", &y);
-						x= x ^ y;
+						x= pow(x,y);
 						printf("la potencia es %i \n", x);
 						break;
 					default:
