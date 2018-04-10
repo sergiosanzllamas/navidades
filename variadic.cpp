@@ -17,8 +17,7 @@
 #define RAI 6
 #define LOG 7
 #define POR 8
-#define DES 9
-#define POT 10
+#define POT 9
 
 
 
@@ -33,6 +32,11 @@
 
 
 #define REN 1 
+#define DES 2
+#define COV 3
+#define EUR 4
+#define EUT 5
+#define DOL 6
 
 #define M 20
 #define N   3
@@ -52,7 +56,6 @@ const char *elegir1[] ={
     "RAIZ",
     "LOGARITMO",
     "PORCENTAJE",
-    "DESCUENTO",
     "POTENCIAS",
     NULL
 };
@@ -67,6 +70,11 @@ const char *elegir2[]={
 };
 const char *elegir3[]={
     "RENTABILIDAD",
+    "DESCUENTO",
+    "LIBRAS",
+    "EUROS",
+    "EURO",
+    "DOLAR",
     NULL
 };
 
@@ -85,8 +93,10 @@ int main(){
     char r; 
     int contra;
     int suma = 0;
-    int num = 1;
-    int intentos = 5;
+    int num = 0;
+    double libra;
+    double euro;
+    double dolar;
     printf("dame tu Nombre:");
     scanf("%s", &r);
     printf("dime tu edad: ");
@@ -107,7 +117,7 @@ int main(){
         switch(operaciones){
             case SIM:
                 printf("operaciones simples:\n");
-                for(int i=0; i<10; i++)
+                for(int i=0; i<9; i++)
                     printf("%i. %s.\n", i+1, elegir1[i]);
                 printf("QUE OPERACION SIMPLE QUIERES:");
                 scanf(" %i", &operacion);
@@ -207,17 +217,6 @@ int main(){
                         s = -s* p/100 + s;
                         printf("el porcentaje es %.2lf\n", s);
                         break;
-                    case DES:
-                        printf("DESCUENTO\n");
-                        printf("hacemos el descuento\n");
-                        printf("Dame el precio:");
-                        scanf("%lf", &s);
-                        printf("dame el descuento:");
-                        scanf("%lf", &p);
-
-                        s= -s * p/100 +s;
-                        printf("el precio final es %.2lf euros \n", s);
-                        break;
                     case POT:
                         printf("POTENCIA\n");
                         printf("hacemos la potencia\n");
@@ -301,7 +300,7 @@ int main(){
                 break;
             case ECO:
                 printf("OPERACIONES ECONOMICAS\n");
-                for(int s=0; s<1; s++)
+                for(int s=0; s<6; s++)
                     printf("%i. %s.\n", s+1, elegir3[s]);
                 printf("que operacion economica  quieres:");
                 scanf("%i", &economica);
@@ -315,6 +314,46 @@ int main(){
                         s = s /p *100;
                         printf("la el nuemro de ventas  es  %.2lf  \n", s);
                         break;
+                    case DES:
+                        printf("DESCUENTO\n");
+                        printf("hacemos el descuento\n");
+                        printf("Dame el precio:");
+                        scanf("%lf", &s);
+                        printf("dame el descuento:");
+                        scanf("%lf", &p);
+
+                        s= -s * p/100 +s;
+                        printf("el precio final es %.2lf € \n", s);
+                        break;
+                    case COV:
+                        printf("Libras a euros\n");
+                        printf("Dame la cantidad de libras:");
+                        scanf("%lf", &libra);
+                        libra = libra *  1.14;
+                        printf("son %.2lf €\n", libra);
+                        break;
+                    case EUR:
+                        printf("Euros a LIbras\n");
+                        printf(" dame la cantidad de euros:");
+                        scanf("%lf", &euro);
+                        euro = euro * 0.87;
+                        printf(" Son %.2lf £\n", euro);
+                        break;
+                    case EUT:
+                        printf("Euros a Dolar Americano\n");
+                        printf("Dame la cantidad de euros:");
+                        scanf("%lf", &euro);
+                        euro = euro * 1.22;
+                        printf("Son %.2lf $\n", euro);
+                        break;
+                    case DOL:
+                        printf("Dolar Americano a Euros\n");
+                        printf("Dame la cantidad de Dolares:");
+                        scanf("%lf", &dolar);
+                        dolar = dolar * 0.81;
+                        printf("Son %.2lf €", dolar);
+                        break;
+
 
                 }
                 break;
@@ -323,10 +362,11 @@ int main(){
                 break;
         }
 
+
     }else
-            printf("tienes %i\n", intentos--);
-        
-        
+        printf("ACCESO DENEGADO\n");
+
+
 
 
     return EXIT_SUCCESS;
