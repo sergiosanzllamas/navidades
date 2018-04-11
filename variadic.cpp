@@ -351,7 +351,7 @@ int main(){
                         printf("Dame la cantidad de Dolares:");
                         scanf("%lf", &dolar);
                         dolar = dolar * 0.81;
-                        printf("Son %.2lf €", dolar);
+                        printf("Son %.2lf €\n", dolar);
                         break;
 
 
