@@ -109,7 +109,7 @@ int main(){
 		 printf("has acertado\n");
 		                         intentos = 0;
 					                 
-
+     system("clear");
 	system("toilet -fpagga  Calculator");
 		for(int o=0; o<3; o++)
 			printf("%i. %s.\n", o+1, elegir0[o]);
