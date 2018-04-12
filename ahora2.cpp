@@ -8,6 +8,7 @@
 int main(){
 
 int opcion;
+int intentos = 0;
 do{
 
 printf("dame el numero que crea conveniente");
