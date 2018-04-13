@@ -54,10 +54,10 @@ int ganador(char a[N][N]){
     return 2;
 }
 void mete(char a[N][N]){
-    char tablero = '1';
+    char tablero = '\0';
     for(int f=0; f<N; f++){
         for(int c=0; c<N; c++)
-            a[f][c] = tablero++;
+            a[f][c] = tablero;
     }
 
 }

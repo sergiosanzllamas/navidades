@@ -94,7 +94,7 @@ int main(){
 	int contra;
 	int suma = 0;
 	int num = 0;
-		int intentos;
+	int intentos;
 	double libra;
 	double euro;
 	double dolar;
@@ -364,7 +364,7 @@ int main(){
 
 
 	}else
-		printf("ACCESO DENEGADO llevas %i intentos\n", intentos);
+		printf("ACCESO DENEGADO te quedan  %i intentos\n", intentos);
 
 	}
 
