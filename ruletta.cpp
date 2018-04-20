@@ -17,19 +17,19 @@
 
 #define N 20
 
-const char *elegir1[]{
+const char *elegir1[] = {
     "IMPORTE",
-        "JUGADA"
+        "JUGADA",
         NULL
 };
-const char *elegir2[]{
+const char *elegir2[] = {
     "DIEZ",
         "VEINTE",
         "UNO",
         "DOS",
         NULL
 };
-const char *elegir3[]{
+const char *elegir3[] = { 
     "PAR O IMPAR",
         "COLUMNA",
         "TRES NUMEROS",
@@ -74,10 +74,9 @@ int main(){
             }
         case JUG:
             printf("que apuesta quieres:\n");
-
             for(int o=0; o<4; o++)
                 printf("%i. %s.\n", o+1, elegir3[o]);
-            scanf("%i", &ahora);
+            scanf("%i", &n);
             switch(jugada){
                 case POI:
                     do{
