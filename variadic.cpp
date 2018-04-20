@@ -105,7 +105,7 @@ int main(){
 	for(int intentos = 5; intentos >=0; intentos--){
 	printf("introduce la contraseña:");
 	scanf(" %i", &contra);
-	if(contra == 1234){
+	if(contra == 2005){
 		 printf("has acertado\n");
 		                         intentos = 0;
 					                 

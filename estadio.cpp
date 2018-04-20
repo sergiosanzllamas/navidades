@@ -28,7 +28,7 @@ int main(){
 		  );
 
 	scanf(" %u", &opcion);
-
+system("clear");
 	switch(opcion) {
 		case PAL:
 			printf("PALCO MAFIA");
